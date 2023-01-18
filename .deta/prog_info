@@ -1,0 +1,1 @@
+{"id":"a4504579-e7cf-4082-8c5f-41a33848aadb","space":48381,"runtime":"python3.9","name":"PI01-Data-Engineering-main","path":"0d89d9","project":"e0d3twub","account":"144798365827","region":"sa-east-1","deps":["fastapi"],"envs":null,"public":true,"log_level":"debug","cron":""}
