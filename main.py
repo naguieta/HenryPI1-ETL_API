@@ -11,35 +11,40 @@ csvFilePath = r"data2.csv"
 
 # Cantidad de veces que aparece una keyword en el título de peliculas/series, por plataforma
 def get_from_title(plataforma,keyword):
-    # Read csv file
+    # Leer archivo .csv
     with open(csvFilePath, encoding='utf-8') as csvf: 
-        # Load csv file data using csv library's dictionary reader
+        # Cargar los datos del archivo .csv usando el lector diccionario de la libreria csv
         csvReader = csv.DictReader(csvf)
+        # Buscar la keyword deseada fila por fila por plataforma en el diccionario
         cantidad = 0
         for row in csvReader:
             if keyword in row['title'] and row['id'][0] == plataforma[0]:
                 cantidad = cantidad + 1
+        # Retornar la cantidad de coincidencias
         return cantidad
 
 # Cantidad de películas por plataforma con un puntaje mayor a XX en determinado año
 def get_score_title(plataforma,score,year):
-    # Read csv file
+    # Leer archivo .csv
     with open(csvFilePath, encoding='utf-8') as csvf: 
-        # Load csv file data using csv library's dictionary reader
+        # Cargar los datos del archivo .csv usando el lector diccionario de la libreria csv
         csvReader = csv.DictReader(csvf)
+        # Buscar las peliculas por plataforma, año y puntaje mayor al ingresado en el diccionario
         cantidad = 0
         for row in csvReader:
             if row['type'] == 'movie':
                 if int(row['score']) > int(score) and row['id'][0] == plataforma[0] and row['release_year'] == year:
                     cantidad = cantidad + 1
+        # Retornar la cantidad de coincidencias
         return cantidad
 
 # La segunda película con mayor score para una plataforma determinada, según el orden alfabético de los títulos.
 def get_second_title(plataforma):
-    # Read csv file
+    # Leer archivo .csv
     with open(csvFilePath, encoding='utf-8') as csvf: 
-        # Load csv file data using csv library's dictionary reader
+        # Cargar los datos del archivo .csv usando el lector diccionario de la libreria csv
         csvReader = csv.DictReader(csvf)
+        # Buscar la primera y segunda pelicula con mayor puntutacion y por orden alfabetico por plataforma
         puntaje1 = 0
         puntaje2 = 0
         titulo1 = '~'
@@ -57,14 +62,16 @@ def get_second_title(plataforma):
                         titulo1 = row['title']
                         puntaje2 = puntaje1
                         puntaje1 = int(row['score'])                    
+        # Retornar el título de la segunda pelicula segun las coincidencias
         return titulo2 
 
 #Película que más duró según año, plataforma y tipo de duración
 def get_longest_title(plataforma,dur_type,year):
-    # Read csv file
+    # Leer archivo .csv
     with open(csvFilePath, encoding='utf-8') as csvf: 
-        # Load csv file data using csv library's dictionary reader
+        # Cargar los datos del archivo .csv usando el lector diccionario de la libreria csv
         csvReader = csv.DictReader(csvf)
+        # Buscar la pelicula de mayor duracion por plataforma y por tipo de duración en el diccionario
         duracion = 0
         titulo = ''
         for row in csvReader:
@@ -72,18 +79,21 @@ def get_longest_title(plataforma,dur_type,year):
                 if int(float(row['duration_int'])) > duracion:
                     duracion = int(float(row['duration_int']))
                     titulo = row['title']
+        # Retornar el título que coincida con las condiciones
         return titulo
 
 #Película que más duró según año, plataforma y tipo de duración
 def get_rating_cvs(rate):
-    # Read csv file
+    # Leer archivo .csv
     with open(csvFilePath, encoding='utf-8') as csvf: 
-        # Load csv file data using csv library's dictionary reader
+        # Cargar los datos del archivo .csv usando el lector diccionario de la libreria csv
         csvReader = csv.DictReader(csvf)
+        # Buscar la cantidad de peliculas y series por rating
         cantidad = 0
         for row in csvReader:
             if row['rating'] == rate:
                 cantidad = cantidad + 1
+        # Retornar la cantidad de coincidencias
         return cantidad
             
 @app.get("/")
