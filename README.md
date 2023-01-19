@@ -1,4 +1,4 @@
-# Proyecto Individual N° 1 de Soy Henry por Nahuel Vargas.
+# Proyecto Individual N° 1 de Soy Henry por Nahuel Vargas
 
 ## Proyecto sobre Data Engineer - Transformación de datos, elaboración y ejecución de una API.
 
