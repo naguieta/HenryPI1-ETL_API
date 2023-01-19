@@ -47,15 +47,17 @@ def get_second_title(plataforma):
         for row in csvReader:
             if row['id'][0] == plataforma[0]:
                 if int(row['score']) >= puntaje1 or int(row['score']) >= puntaje2:
+                    if row['title'][0] < 'A' or row['title'][0] > 'z':
+                        continue
                     if int(row['score']) > puntaje2 or row['title'] < titulo2:
                         titulo2 = row['title']
                         puntaje2 = int(row['score'])
-                    if int(row['score']) > puntaje1 or row['title'] < titulo1:
+                    if int(row['score']) > puntaje1 and row['title'] < titulo1:
                         titulo2 = titulo1
                         titulo1 = row['title']
                         puntaje2 = puntaje1
                         puntaje1 = int(row['score'])                    
-        return titulo2
+        return titulo2 
 
 #Película que más duró según año, plataforma y tipo de duración
 def get_longest_title(plataforma,dur_type,year):
@@ -110,4 +112,4 @@ def get_rating(rate: str):
    
 @app.get("/ver/")
 def demo():
-    return "version: 9"
+    return "version: 5"
