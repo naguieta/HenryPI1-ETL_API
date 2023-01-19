@@ -3,7 +3,7 @@
 ## Proyecto sobre Data Engineer - Transformación de datos, elaboración y ejecución de una API.
 
 ### Transformación de datos.
-Como primer paso de este proyecto se requirió el ajuste de datos sobre los arvhicos csv ubicados en la carpeta Datasets.
+Como primer paso de este proyecto se requirió el ajuste de datos sobre los archicos csv ubicados en la carpeta Datasets.
 Las modificaciones son las siguientes:
 - Generar campo id: Cada id se compondrá de la primera letra del nombre de la plataforma, seguido del show_id ya presente en los datasets (ejemplo para títulos de Amazon = as123)
 - Los valores nulos del campo rating deberán reemplazarse por el string “G” (corresponde al maturity rating: “general for all audiences”
