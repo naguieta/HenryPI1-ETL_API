@@ -63,7 +63,11 @@ Parametros disponibles:
     13+, 16, 16+, 18+, 7+, ages_16_, ages_18_, all, all_ages, g, nc-17, not_rate, nr, pg, pg-13, r, rating, tv-14, tv-g, tv_ma, tv_nr, tv_pg, tv_y, tv_y7, unrated
 
 ## Video de demostracion de uso de la API
-url del video
+
+
+
+https://user-images.githubusercontent.com/60989796/213586834-e67101ca-f382-45fb-a5b6-ac7ca65ee484.mp4
+
 
 ## Instrucciones para usar este repositorio
 1. Clonar este repositorio.
