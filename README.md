@@ -65,10 +65,10 @@ Parametros disponibles:
 ## Video de demostracion de uso de la API
 url del video
 
-## instrucciones para usar este repositorio
-1. clonar este repositorio.
+## Instrucciones para usar este repositorio
+1. Clonar este repositorio.
 2. Seguir las siguientes instrucciones para instalar y configurar FastApi y DETA -> 
     https://fastapi.tiangolo.com/deployment/deta/#create-a-free-deta-account
-3. Realizar las pruebas en la seccion "Instrucciones de uso" en este archivo.
-4. Calificar este proyecto con la máxima puntuación posible.
+3. Realizar las pruebas en la seccion "Instrucciones de uso" en este archivo. -> https://github.com/naguieta/HenryPI#instrucciones-de-uso
+4. *Calificar este proyecto con la máxima puntuación posible.*
 
