@@ -28,49 +28,47 @@ Una vez que el deploy de este codigo es realizado, la API permite hacer 5 consul
 
 A continuacion se deja un ejemplo por consulta posible, utilizando la URL donde se hizo el deply original. Al final de los ejemplos se pueden observar los posibles valores a utilizar en los parametros.
 
-Cantidad de veces que aparece una keyword en el título de peliculas/series, por plataforma.
-URL/get_word_count/plataforma/keyword
-https://0d89d9.deta.dev/get_word_count/netflix/love
-Respuesta de la API: 196
+1. Cantidad de veces que aparece una keyword en el título de peliculas/series, por plataforma.
+- *URL/get_word_count/plataforma/keyword*
+    - https://0d89d9.deta.dev/get_word_count/netflix/love
+        - Respuesta de la API: 196
 
-Cantidad de películas por plataforma con un puntaje mayor a XX en determinado año.
-URL/get_score_count/plataforma/puntaje/año
+2. Cantidad de películas por plataforma con un puntaje mayor a XX en determinado año.
+- *URL/get_score_count/plataforma/puntaje/año*
+    - https://0d89d9.deta.dev/get_score_count/netflix/85/2010
+        - Respuesta de la API: 20
 
-https://0d89d9.deta.dev/get_score_count/netflix/85/2010
+3. La segunda película con mayor score para una plataforma determinada, según el orden alfabético de los títulos.
+- *URL/get_second_score/plataforma*
+    - https://0d89d9.deta.dev/get_second_score/amazon
+        - Respuesta de la API: "abilene town"
 
-Respuesta de la API: 20
+4. Película que más duró según año, plataforma y tipo de duración
+- *URL/get_longest/plataforma/tipoDuracion/año*
+    - https://0d89d9.deta.dev/get_longest/netflix/min/2016
+        - Respuesta de la API: "sairat"
 
-La segunda película con mayor score para una plataforma determinada, según el orden alfabético de los títulos.
-URL/get_second_score/plataforma
-https://0d89d9.deta.dev/get_second_score/amazon
-Respuesta de la API: "abilene town"
-
-Película que más duró según año, plataforma y tipo de duración
-URL/get_longest/plataforma/tipoDuracion/año
-https://0d89d9.deta.dev/get_longest/netflix/min/2016
-Respuesta de la API: "sairat"
-
-Cantidad de series y películas por rating
-URL/get_rating_count/rating
-https://0d89d9.deta.dev/get_rating_count/18+
-Respuesta de la API: 1243
+5. Cantidad de series y películas por rating
+- *URL/get_rating_count/rating*
+    - https://0d89d9.deta.dev/get_rating_count/18+
+        - Respuesta de la API: 1243
 
 Parametros disponibles:
-plataforma: amazon - disney - hulu - netflix
-keyword: cadena de caracteres a buscar.
-puntaje: desde 0 hasta 100
-año: desde 1920 hasta 2021
-tipoDuracion: min si se desea su duracion en minutos, season si se desea su duracion en temporadas
-rating: tipo de clasificacion de la pelicula, a continuacion los posibles valores separados por coma.
+   - **plataforma**: amazon - disney - hulu - netflix 
+   - **keyword**: cadena de caracteres a buscar.
+   - **puntaje**: desde 0 hasta 100
+   - **año**: desde 1920 hasta 2021
+   - **tipoDuracion**: min si se desea su duracion en minutos, season si se desea su duracion en temporadas
+   - **rating**: tipo de clasificacion de la pelicula, a continuacion los posibles valores separados por coma ->
     13+, 16, 16+, 18+, 7+, ages_16_, ages_18_, all, all_ages, g, nc-17, not_rate, nr, pg, pg-13, r, rating, tv-14, tv-g, tv_ma, tv_nr, tv_pg, tv_y, tv_y7, unrated
 
 ## Video de demostracion de uso de la API
 url del video
 
 ## instrucciones para usar este repositorio
-clonar este repositorio.
-Seguir las siguientes instrucciones para instalar y configurar FastApi y DETA
+1. clonar este repositorio.
+2. Seguir las siguientes instrucciones para instalar y configurar FastApi y DETA -> 
     https://fastapi.tiangolo.com/deployment/deta/#create-a-free-deta-account
-Realizar las pruebas en la seccion "Instrucciones de uso" en este archivo.
-Calificar este proyecto con la máxima puntuación posible.
+3. Realizar las pruebas en la seccion "Instrucciones de uso" en este archivo.
+4. Calificar este proyecto con la máxima puntuación posible.
 
