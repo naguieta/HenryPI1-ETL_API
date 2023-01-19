@@ -35,7 +35,9 @@ Respuesta de la API: 196
 
 Cantidad de películas por plataforma con un puntaje mayor a XX en determinado año.
 URL/get_score_count/plataforma/puntaje/año
+
 https://0d89d9.deta.dev/get_score_count/netflix/85/2010
+
 Respuesta de la API: 20
 
 La segunda película con mayor score para una plataforma determinada, según el orden alfabético de los títulos.
