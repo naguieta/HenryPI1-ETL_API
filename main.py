@@ -2,11 +2,11 @@ from fastapi import FastAPI
 import csv
 from deta import Deta
 
-#from csvkit.utilities.csvsql import CSVSQL
+# Inicialización de FastAPI
 app = FastAPI()
-# Initialize with a Project Key for ztp1zf
+# Inicializar el proyecto con la key de ztp1zf
 deta = Deta("e0d3twub_YfWiW36mbfC1dzk4pvi2bBscK7u93UEJ")
-# Set data file path
+# Definir el path del archivo a leer
 csvFilePath = r"data2.csv"
 
 # Cantidad de veces que aparece una keyword en el título de peliculas/series, por plataforma
